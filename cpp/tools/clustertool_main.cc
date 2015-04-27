@@ -128,7 +128,7 @@ ClusterConfig LoadConfig() {
 
 
 int main(int argc, char* argv[]) {
-  google::ParseCommandLineFlags(&argc, &argv, true);
+  gflags::ParseCommandLineFlags(&argc, &argv, true);
   google::InitGoogleLogging(argv[0]);
   OpenSSL_add_all_algorithms();
   ERR_load_crypto_strings();

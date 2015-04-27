@@ -39,7 +39,7 @@ void DumpLoggedCert(const char* filename) {
 
 
 int main(int argc, char* argv[]) {
-  google::ParseCommandLineFlags(&argc, &argv, true);
+  gflags::ParseCommandLineFlags(&argc, &argv, true);
   google::InitGoogleLogging(argv[0]);
 
   for (int i = 1; i < argc; ++i)

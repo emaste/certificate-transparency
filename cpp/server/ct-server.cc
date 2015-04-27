@@ -127,7 +127,7 @@ using cert_trans::Update;
 using cert_trans::UrlFetcher;
 using ct::ClusterNodeState;
 using ct::SignedTreeHead;
-using google::RegisterFlagValidator;
+using gflags::RegisterFlagValidator;
 using std::bind;
 using std::chrono::duration;
 using std::chrono::duration_cast;
@@ -401,7 +401,7 @@ int main(int argc, char* argv[]) {
   signal(SIGINT, SIG_IGN);
   signal(SIGTERM, SIG_IGN);
 
-  google::ParseCommandLineFlags(&argc, &argv, true);
+  gflags::ParseCommandLineFlags(&argc, &argv, true);
   google::InitGoogleLogging(argv[0]);
   google::InstallFailureSignalHandler();
 
