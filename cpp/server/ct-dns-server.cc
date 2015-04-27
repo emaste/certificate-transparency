@@ -12,7 +12,7 @@
 
 using cert_trans::LoggedCertificate;
 using ct::SignedTreeHead;
-using google::RegisterFlagValidator;
+using gflags::RegisterFlagValidator;
 using std::string;
 using std::stringstream;
 
@@ -267,7 +267,7 @@ class Keyboard : public Server {
 };
 
 int main(int argc, char* argv[]) {
-  google::ParseCommandLineFlags(&argc, &argv, true);
+  gflags::ParseCommandLineFlags(&argc, &argv, true);
   google::InitGoogleLogging(argv[0]);
 
   // TODO(pphaneuf): This current *has* to be SQLite, because it
